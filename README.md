@@ -26,7 +26,7 @@ também do agendamento e gerenciamento de consultas.
 **Clone script:**
   
 ```bash
-git clone http://git.....com.br/....git
+git clone https://github.com/andreguedesantunes877/ImpulseTech.git
 ```
 ---
 
