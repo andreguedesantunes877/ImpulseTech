@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Distributed Layer", "1 - Distributed Layer", "{D7858EDF-AD1B-4897-9726-4F1E2F460728}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain Layer", "2 - Domain Layer", "{7C7E8A29-245E-4173-AFEB-C93288D97BCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure Layer", "3 - Infrastructure Layer", "{14CF2801-8C81-4395-9767-3CE4ED3F8828}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Tests Layer", "4 - Tests Layer", "{4BA2E64C-7DE7-431E-8756-09D01D068A78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impulse.Domain", "src\Impulse.Domain\Impulse.Domain.csproj", "{AB55D916-0ADF-4917-84C9-3C736FA25066}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Data", "3.1 - Data", "{A50E7CB7-B39F-4AB9-8B90-3FCBA9568A9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - CrossCutting", "3.2 - CrossCutting", "{61D295D7-121A-4508-B816-F9D7B32E8CA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Unit Tests", "4.1 - Unit Tests", "{8A0D1B19-59B8-4D66-AAB0-87FE229F2AC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impulse.Infra.Data", "src\Impulse.Infra.Data\Impulse.Infra.Data.csproj", "{BA3E5B54-D718-4545-B971-0EADDCBC097A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impulse.Infra.CrossCutting.IoC", "src\Impulse.Infra.CrossCuting.IoC\Impulse.Infra.CrossCutting.IoC.csproj", "{2DBA43EE-84ED-4405-AA44-1BFDD8370166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impulse.Domain.Tests", "tests\Impulse.Domain.Tests\Impulse.Domain.Tests.csproj", "{55C673CA-1526-4FDE-9B99-43E5CD80436B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impulse.App", "src\Impulse.App\Impulse.App.csproj", "{A51F2D15-10DA-46F2-BF8D-FEE70ECBD976}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impulse.Infra.CrossCutting", "src\Impulse.Infra.CrossCutting\Impulse.Infra.CrossCutting.csproj", "{51F58429-9AE3-4F22-B493-B8C71E99CE27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impulse.Api", "src\Impulse.Api\Impulse.Api.csproj", "{644D2C9B-21DD-4C4D-988F-15863D34A1D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB55D916-0ADF-4917-84C9-3C736FA25066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB55D916-0ADF-4917-84C9-3C736FA25066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB55D916-0ADF-4917-84C9-3C736FA25066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB55D916-0ADF-4917-84C9-3C736FA25066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3E5B54-D718-4545-B971-0EADDCBC097A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3E5B54-D718-4545-B971-0EADDCBC097A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3E5B54-D718-4545-B971-0EADDCBC097A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3E5B54-D718-4545-B971-0EADDCBC097A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBA43EE-84ED-4405-AA44-1BFDD8370166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBA43EE-84ED-4405-AA44-1BFDD8370166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBA43EE-84ED-4405-AA44-1BFDD8370166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBA43EE-84ED-4405-AA44-1BFDD8370166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C673CA-1526-4FDE-9B99-43E5CD80436B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C673CA-1526-4FDE-9B99-43E5CD80436B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C673CA-1526-4FDE-9B99-43E5CD80436B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C673CA-1526-4FDE-9B99-43E5CD80436B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51F2D15-10DA-46F2-BF8D-FEE70ECBD976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51F2D15-10DA-46F2-BF8D-FEE70ECBD976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51F2D15-10DA-46F2-BF8D-FEE70ECBD976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51F2D15-10DA-46F2-BF8D-FEE70ECBD976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51F58429-9AE3-4F22-B493-B8C71E99CE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F58429-9AE3-4F22-B493-B8C71E99CE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F58429-9AE3-4F22-B493-B8C71E99CE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F58429-9AE3-4F22-B493-B8C71E99CE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644D2C9B-21DD-4C4D-988F-15863D34A1D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644D2C9B-21DD-4C4D-988F-15863D34A1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644D2C9B-21DD-4C4D-988F-15863D34A1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644D2C9B-21DD-4C4D-988F-15863D34A1D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB55D916-0ADF-4917-84C9-3C736FA25066} = {7C7E8A29-245E-4173-AFEB-C93288D97BCF}
+		{A50E7CB7-B39F-4AB9-8B90-3FCBA9568A9D} = {14CF2801-8C81-4395-9767-3CE4ED3F8828}
+		{61D295D7-121A-4508-B816-F9D7B32E8CA2} = {14CF2801-8C81-4395-9767-3CE4ED3F8828}
+		{8A0D1B19-59B8-4D66-AAB0-87FE229F2AC8} = {4BA2E64C-7DE7-431E-8756-09D01D068A78}
+		{BA3E5B54-D718-4545-B971-0EADDCBC097A} = {A50E7CB7-B39F-4AB9-8B90-3FCBA9568A9D}
+		{2DBA43EE-84ED-4405-AA44-1BFDD8370166} = {61D295D7-121A-4508-B816-F9D7B32E8CA2}
+		{55C673CA-1526-4FDE-9B99-43E5CD80436B} = {8A0D1B19-59B8-4D66-AAB0-87FE229F2AC8}
+		{A51F2D15-10DA-46F2-BF8D-FEE70ECBD976} = {D7858EDF-AD1B-4897-9726-4F1E2F460728}
+		{51F58429-9AE3-4F22-B493-B8C71E99CE27} = {61D295D7-121A-4508-B816-F9D7B32E8CA2}
+		{644D2C9B-21DD-4C4D-988F-15863D34A1D0} = {D7858EDF-AD1B-4897-9726-4F1E2F460728}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B74E785-D016-46A7-91DC-4639CDB62075}
+	EndGlobalSection
+EndGlobal

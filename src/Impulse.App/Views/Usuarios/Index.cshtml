@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Impulse.Domain.ViewModels.Usuarios.UsuariosViewModel>
+
+@{
+    ViewBag.Title = "Usuários";
+}
+
+<div class="jumbotron">
+    <h3>Listagem de usuários</h3>
+</div>
+
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documento)
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Documento)
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<br>
+<div style="color: red">@ViewBag.Message</div>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Impulse.Domain.ViewModels.Agendamentos.AgendamentosViewModel>
+
+@{
+    ViewBag.Title = "Agendamentos";
+}
+
+<div class="jumbotron">
+    <h3>Listagem de agendamentos</h3>
+</div>
+
+<a class="btn btn-w-m btn-primary" href="@Url.Action("Create")"><i class="fa fa-plus"></i> Cadastrar</a>
+
+<br>
+<br>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.Label("Ações")
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paciente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Medico)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td class="text-center">
+                    <a href="@Url.Action("Edit", new {id = item.Id})"><i class="fa fa-plus"></i> Editar</a> |
+                    <a href="@Url.Action("Delete", new {id = item.Id})"><i class="fa fa-plus"></i> Remover</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<br>
+<div style="color: red">@ViewBag.Message</div>

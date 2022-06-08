@@ -1,0 +1,43 @@
+﻿@model Impulse.Domain.ViewModels.Pacientes.PacienteCreateViewModel
+
+@{
+    ViewBag.Title = "Pacientes";
+}
+
+<div class="jumbotron">
+    <h3>Cadastro de paciente</h3>
+</div>
+
+
+@using (Html.BeginForm("Create", "Pacientes", FormMethod.Post))
+{
+    @*@Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)*@
+    
+    @Html.LabelFor(model => model.Nome)
+    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.Nome, "", new { style = "color: red" })
+    
+    <br>
+    
+    @Html.LabelFor(model => model.Documento)
+    @Html.EditorFor(model => model.Documento, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.Documento, "", new { style = "color: red" })
+    
+    <br>
+    
+    @Html.LabelFor(model => model.NumeroConvenio)
+    @Html.EditorFor(model => model.NumeroConvenio, new { htmlAttributes = new { @class = "form-control" } })
+    
+    <br>
+    
+    <button type="submit" class="btn btn-w-m btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Confirmar</button>
+    <a class="btn btn-w-m btn-default" href="@Url.Action("Index")"><i class="fa fa-plus"></i> Cancelar</a>
+                                                                                              
+    <br>
+    <div style="color: red">@ViewBag.Message</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

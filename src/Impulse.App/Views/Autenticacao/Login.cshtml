@@ -1,0 +1,60 @@
+﻿@model Impulse.Domain.ViewModels.Autenticacao.AutenticacaoViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Impulse Tech</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color: lightgray">
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+            
+            @using (Html.BeginForm("Login", "Autenticacao", FormMethod.Post))
+            {
+                <div style="margin-top: 50%">
+                    <div class="text-center">
+                        <img width="110px" style="height: 105px;" src="~/Content/Images/picture-blank-user.jpg" class="img-circle circle-border m-b-xl" alt="profile">
+                    </div>
+                    
+                    <br>
+                    
+                    @Html.LabelFor(model => model.Documento)
+                    @Html.EditorFor(model => model.Documento, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.Documento, "", new {style = "color: red"})
+
+                    @Html.LabelFor(model => model.Senha)
+                    @Html.EditorFor(model => model.Senha, new {htmlAttributes = new {Type = "password", @class = "form-control"}})
+                    @Html.ValidationMessageFor(model => model.Senha, "", new {style = "color: red"})
+
+                </div>
+                
+                <br>
+                
+                <button type="submit" class="btn btn-w-m btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Confirmar</button>
+            }
+            
+            <br>
+            
+            <div style="color: red">@ViewBag.Message</div> 
+
+        </div>
+        <div class="col-md-5"></div>
+    </div>
+</div>
+
+</body>
+</html>

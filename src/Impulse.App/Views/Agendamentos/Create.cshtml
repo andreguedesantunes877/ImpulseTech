@@ -1,0 +1,51 @@
+﻿@model Impulse.Domain.ViewModels.Agendamentos.AgendamentoCreateViewModel
+
+@{
+    ViewBag.Title = "Agendamentos";
+}
+
+<div class="jumbotron">
+    <h3>Cadastro de agendamento</h3>
+</div>
+
+@using (Html.BeginForm("Create", "Agendamentos", FormMethod.Post))
+{
+    <a href="@Url.Action("Create", "Pacientes")"><i class="fa fa-plus"></i> Cadastrar Paciente</a>
+    <br>
+    <br>
+    
+    @Html.LabelFor(model => model.PacienteId)
+    @Html.DropDownListFor(model => model.PacienteId, null, "", new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.PacienteId, "", new { @class = "text-danger" })
+    
+    <br>
+    
+    @Html.LabelFor(model => model.MedicoId)
+    @Html.DropDownListFor(model => model.MedicoId, null, "", new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.MedicoId, "", new { @class = "text-danger" })
+    
+    <br>
+    
+    @Html.LabelFor(model => model.DataConsulta)
+    @Html.EditorFor(model => model.DataConsulta, new { htmlAttributes = new { type="date", @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.DataConsulta, "", new { @class = "text-danger" })
+    
+    <br>
+    
+    @Html.LabelFor(model => model.HoraConsulta) 
+    @Html.EditorFor(model => model.HoraConsulta, new { htmlAttributes = new { type="time", @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.HoraConsulta, "", new { @class = "text-danger" })
+    
+    <br>
+    
+    <button type="submit" class="btn btn-w-m btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Confirmar</button>
+    <a class="btn btn-w-m btn-default" href="@Url.Action("Index")"><i class="fa fa-plus"></i> Cancelar</a>
+                                                                                              
+    <br>
+    <div style="color: red">@ViewBag.Message</div> 
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
